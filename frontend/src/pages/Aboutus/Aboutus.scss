@@ -1,0 +1,17 @@
+@import "../../styles/sass/variables";
+
+.aboutus_sec {
+    .top-header {
+        background-color: $primary-color;
+        padding: 6rem 0;
+
+        .main-title {
+            color: $font-light;
+        }
+    }
+
+    .why_choose{
+        background-color: $card-bg;
+        padding: 3rem 0;
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../styles/sass/variables";
+
+.service_sec {
+    position: relative;
+
+    .background {
+        background-color: $bg-dark;
+        .image {
+            height: 70vh;
+            width: 100vw;
+            opacity: 0.4;
+        }
+    }
+
+    .service-content {
+        position: absolute;
+        top: 10vh;
+
+        .title-two {
+            text-transform: uppercase;
+        }
+
+        h1, p {
+            color: $font-light;
+        }
+
+        .service-carousel {
+            .service-item {
+                padding: 0 1rem;
+                max-width: 20vw;
+
+                .icon-box {
+                    padding: 3rem;
+                    height: 20vh;
+                    background-color: $bg-color;
+                    align-items: center;
+                    border-radius: 1rem 1rem 0 0 ;
+
+                    .icon {
+                        height: 3rem;
+                        width: 3rem;
+                        background-color: $bg-color;
+                        border-radius: 50%;
+                        border: 1px solid $primary-color;
+                        font-size: 1.8rem;
+                        color: $secondary-color;
+                        padding: 0.5rem;
+                    }
+
+                    h5 {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                    }
+                }
+
+                .image {
+                    height: 30vh;
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
+        }
+    }
+}

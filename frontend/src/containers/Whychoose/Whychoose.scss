@@ -1,0 +1,29 @@
+@import "../../styles/sass/variables";
+
+.whychoose_sec {
+    margin: 5rem 0;
+
+    .title-two {
+        text-transform: uppercase;
+    }
+
+    .feature {
+        margin: 2rem 0;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $secondary-color;
+        }
+
+        h6 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .image {
+        height: 60vh;
+        width: 100%;
+    }
+}

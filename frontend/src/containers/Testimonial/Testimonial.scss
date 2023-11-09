@@ -1,0 +1,67 @@
+@import "../../styles/sass/variables";
+
+.testimonial_sec {
+    position: relative;
+
+    
+    .background {
+        background-color: $bg-dark;
+        .image {
+            height: 70vh;
+            width: 100vw;
+            opacity: 0.4;
+        }
+    }
+
+    .testimonial {
+        padding: 0 1rem;
+        position: absolute;
+        top: 15vh;
+
+        .title-two {
+                text-transform: uppercase;
+            }
+
+        .main-title {
+            color: $font-light;
+        }
+
+        .testimonial-carousel {
+            .testimonial-item {
+
+                .img-fluid {
+                    height: 5rem;
+                    width: 5rem;
+                    border-radius: 50%;
+                    margin-right: 0.5rem;
+                }
+
+                h5 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: $primary-color;
+                }
+
+                i {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $font-light;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    color: $font-light;
+                }
+            }
+        }
+
+                .image {
+                    height: 45vh;
+                    width: 25vw;
+                    border-radius: 5px;
+                }
+    }
+
+    
+}

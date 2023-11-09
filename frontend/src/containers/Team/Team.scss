@@ -1,0 +1,77 @@
+@import "../../styles/sass/variables";
+
+.team_sec {
+    margin: 5rem 0;
+
+    .title-two {
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    .team-carousel {
+        .team {
+            margin: 1rem;
+
+            .team-img {
+                .img-fluid {
+                    height: 40vh;
+                    width: 20vw;
+                    border-top-right-radius: $border-radius;
+                    border-top-left-radius: $border-radius;
+                }
+            }
+
+            .team-social {
+                display: grid;
+                top: 0;
+                background-color: $primary-color;
+                height: 100%;
+
+                .btn-social {
+                    margin: 0.5rem;
+
+                    .icon {
+                        font-size: 2rem;
+                        height: 3rem;
+                        width: 3rem;
+                        background-color: $secondary-color;
+                        border-radius: 50%;
+                        padding: 0.5rem;
+                        color: $font-light;
+                    }
+                }
+            }
+
+            .team-text {
+                background-color: $primary-color;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom-right-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+
+                h5 {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $font-light;
+                }
+            }
+
+            &:hover {
+                .team-social {
+                    display: block;
+                    display: grid;
+                    transition: 2s;
+                }
+            }
+        }
+
+    }
+}

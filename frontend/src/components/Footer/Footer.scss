@@ -1,0 +1,103 @@
+@import "../../styles/sass/variables";
+
+.footer_sec {
+    background-color: $font-color;
+    padding: 3rem 0;
+
+    .navbar-brand h1 {
+        color: $primary-color;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    h5,
+    p {
+        color: $font-light;
+    }
+
+    .services {
+        .main-title {
+            color: $primary-color;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        p {
+            color: $font-light;
+
+            .icon {
+                color: $primary-color;
+                margin: 0 0.5rem;
+            }
+        }
+
+        .btn-social {
+            .icon {
+                background-color: $bg-color;
+                color: $font-color;
+                height: 3rem;
+                width: 3rem;
+                border-radius: 50%;
+                padding: 0.5rem;
+                font-size: 2rem;
+                margin: 0 1rem;
+            }
+        }
+
+        .pages {
+            display: grid;
+
+            .item {
+                text-decoration: none;
+                color: $font-light;
+                font-size: 18px;
+                font-weight: 400;
+                margin: 0.5rem 0;
+
+                .icon {
+                    font-weight: 500;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        .input-group {
+            position: relative;
+
+            .form-control {
+                padding: 1rem;
+                border-radius: $border-radius-full;
+            }
+
+            .btn-style {
+                position: absolute;
+                left: 50%;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border: none;
+            }
+        }
+    }
+
+    .copyright {
+
+        p {
+            color: $font-light;
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+
+        .nav {
+            .nav-item {
+                .nav-link {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $font-light;
+                }
+            }
+        }
+    }
+}

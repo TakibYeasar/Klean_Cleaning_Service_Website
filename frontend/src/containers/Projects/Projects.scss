@@ -1,0 +1,56 @@
+@import "../../styles/sass/variables";
+
+.projects_sec {
+    position: relative;
+
+    .background {
+        background-color: $bg-dark;
+
+        .image {
+            height: 80vh;
+            width: 100vw;
+            opacity: 0.4;
+        }
+    }
+
+    .portfolio-container {
+        position: relative;
+
+        margin: 5rem 0;
+
+        .portfolio-item {
+            .portfolio-img .img-fluid {
+                height: 25vh;
+                width: 100%;
+            }
+
+            .portfolio-text {
+                position: absolute;
+                top: 0;
+                display: none;
+                background-color: $primary-color;
+                height: 100%;
+                width: 100%;
+                padding: 5rem 0 0 5rem;
+                justify-content: center;
+
+                .icon {
+                    background-color: $secondary-color;
+                    border-radius: 1rem;
+                    font-size: 3rem;
+                    padding: 0.5rem;
+                    margin: 1rem;
+                    color: $font-light;
+                }
+            }
+
+            &:hover {
+                .portfolio-text {
+                    display: block;
+                }
+            }
+        }
+
+
+    }
+}

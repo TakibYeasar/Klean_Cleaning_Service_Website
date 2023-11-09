@@ -1,0 +1,9 @@
+export { default as Homepage } from "./Homepage";
+export { default as Aboutus } from "./Aboutus/Aboutus";
+export { default as Allblogs } from "./Allblogs/Allblogs";
+export { default as Allprojects } from "./Allprojects/Allprojects";
+export { default as Authenticate } from "./Authenticate/Authenticate";
+export { default as Blogdetails } from "./Blogdetails/Blogdetails";
+export { default as Contact } from "./Contact/Contact";
+export { default as Registrations } from "./Registrations/Registrations";
+export { default as Services } from "./Services/Services";

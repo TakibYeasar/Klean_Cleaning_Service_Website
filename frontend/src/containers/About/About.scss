@@ -1,0 +1,48 @@
+@import "../../styles/sass/variables";
+
+.about_sec {
+    margin: 5rem 0;
+    
+    .bg-about {
+        position: relative;
+        background-color: $bg-dark;
+        .image {
+            height: 60vh;
+            width: 100%;
+            opacity: 0.4;
+        }
+
+        .bg-about-text {
+            position: absolute;
+            top: 35%;
+            left: 35%;
+
+            h1 {
+                font-size: 5rem;
+                font-weight: bold;
+                color: $font-light;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $font-light;
+            }
+
+            .icon {
+                font-size: 4rem;
+                color: $primary-color;
+            }
+        }
+    }
+
+    .about-content {
+        padding: 5rem;
+
+        .title-two {
+            text-transform: uppercase;
+        }
+    }
+
+
+}
