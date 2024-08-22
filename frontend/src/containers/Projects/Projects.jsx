@@ -2,13 +2,13 @@ import React from 'react';
 import "./Projects.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { FaEye, FaLink } from "react-icons/fa";
-import bg from "../../../public/assets/carousel-2.jpg";
-import port1 from "../../../public/assets/portfolio-1.jpg";
-import port2 from "../../../public/assets/portfolio-2.jpg";
-import port3 from "../../../public/assets/portfolio-3.jpg";
-import port4 from "../../../public/assets/portfolio-4.jpg";
-import port5 from "../../../public/assets/portfolio-5.jpg";
-import port6 from "../../../public/assets/portfolio-6.jpg";
+import bg from "../../../public/images/carousel-2.jpg";
+import port1 from "../../../public/images/portfolio-1.jpg";
+import port2 from "../../../public/images/portfolio-2.jpg";
+import port3 from "../../../public/images/portfolio-3.jpg";
+import port4 from "../../../public/images/portfolio-4.jpg";
+import port5 from "../../../public/images/portfolio-5.jpg";
+import port6 from "../../../public/images/portfolio-6.jpg";
 
 const projectdata = [
     {

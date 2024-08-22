@@ -1,9 +1,9 @@
 import React from 'react';
 import "./Blog.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
-import blog1 from "../../../public/assets/blog-1.jpg";
-import blog2 from "../../../public/assets/blog-2.jpg";
-import blog3 from "../../../public/assets/blog-3.jpg";
+import blog1 from "../../../public/images/blog-1.jpg";
+import blog2 from "../../../public/images/blog-2.jpg";
+import blog3 from "../../../public/images/blog-3.jpg";
 
 const Blog = () => {
     return (

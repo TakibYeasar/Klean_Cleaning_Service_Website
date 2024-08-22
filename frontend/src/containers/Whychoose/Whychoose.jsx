@@ -2,7 +2,7 @@ import React from 'react';
 import CountUp from 'react-countup';
 import "./Whychoose.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
-import feature from "../../../public/assets/feature.jpg";
+import feature from "../../../public/images/feature.jpg";
 
 const Whychoose = () => {
     return (

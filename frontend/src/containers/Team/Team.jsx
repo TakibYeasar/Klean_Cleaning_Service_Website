@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import './Team.scss';
-import team1 from "../../../public/assets/team-1.jpg";
-import team2 from "../../../public/assets/team-2.jpg";
-import team3 from "../../../public/assets/team-3.jpg";
-import team4 from "../../../public/assets/team-4.jpg";
+import team1 from "../../../public/images/team-1.jpg";
+import team2 from "../../../public/images/team-2.jpg";
+import team3 from "../../../public/images/team-3.jpg";
+import team4 from "../../../public/images/team-4.jpg";
 
 const teamMembers = [
     { img: team1, name: "Full Name 1", designation: "Designation 1" },

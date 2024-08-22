@@ -2,11 +2,11 @@ import React from 'react';
 import "./Blogdetails.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { FaAngleDoubleRight, FaAngleRight } from "react-icons/fa";
-import carousel1 from "../../../public/assets/carousel-1.jpg";
-import user from "../../../public/assets/user.jpg";
-import blog1 from "../../../public/assets/blog-1.jpg";
-import blog2 from "../../../public/assets/blog-2.jpg";
-import blog3 from "../../../public/assets/blog-3.jpg";
+import carousel1 from "../../../public/images/carousel-1.jpg";
+import user from "../../../public/images/user.jpg";
+import blog1 from "../../../public/images/blog-1.jpg";
+import blog2 from "../../../public/images/blog-2.jpg";
+import blog3 from "../../../public/images/blog-3.jpg";
 
 const Blogdetails = () => {
     return (

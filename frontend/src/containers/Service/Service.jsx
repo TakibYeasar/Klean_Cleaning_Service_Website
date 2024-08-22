@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import "./Service.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { FaCity, FaHotel, FaSpa, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import blog1 from "../../../public/assets/blog-1.jpg";
-import blog2 from "../../../public/assets/blog-2.jpg";
-import blog3 from "../../../public/assets/blog-3.jpg";
+import blog1 from "../../../public/images/blog-1.jpg";
+import blog2 from "../../../public/images/blog-2.jpg";
+import blog3 from "../../../public/images/blog-3.jpg";
 
 const services = [
     {
