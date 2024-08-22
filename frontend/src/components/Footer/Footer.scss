@@ -4,6 +4,11 @@
     background-color: $font-color;
     padding: 3rem 0;
 
+    .container {
+        padding: 0 3rem;
+        max-width: 100%;
+    }
+
     .navbar-brand h1 {
         color: $primary-color;
         font-size: 4rem;
@@ -35,12 +40,10 @@
             .icon {
                 background-color: $bg-color;
                 color: $font-color;
-                height: 3rem;
-                width: 3rem;
                 border-radius: 50%;
                 padding: 0.5rem;
-                font-size: 2rem;
-                margin: 0 1rem;
+                font-size: 2.5rem;
+                margin: 0 0.5rem;
             }
         }
 
@@ -52,34 +55,44 @@
                 color: $font-light;
                 font-size: 18px;
                 font-weight: 400;
-                margin: 0.5rem 0;
+                margin: 0.2rem 0;
 
                 .icon {
                     font-weight: 500;
                     margin-right: 0.5rem;
                 }
+
+                &:hover {
+                    color: $primary-color;
+                }
             }
         }
 
         .input-group {
-            position: relative;
+            display: flex;
+            align-items: center;
 
             .form-control {
+                flex: 1;
                 padding: 1rem;
-                border-radius: $border-radius-full;
+                border-radius: $border-radius-full 0 0 $border-radius-full;
+                border: none;
             }
 
             .btn-style {
-                position: absolute;
-                left: 50%;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
+                padding: 1rem;
+                border-radius: 0 $border-radius-full $border-radius-full 0;
                 border: none;
+                background-color: $primary-color;
+                color: $font-color;
             }
         }
     }
 
     .copyright {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem;
 
         p {
             color: $font-light;
@@ -91,11 +104,20 @@
         }
 
         .nav {
+            display: flex;
+
             .nav-item {
+                margin-left: 1rem;
+
                 .nav-link {
                     font-size: 18px;
                     font-weight: 400;
                     color: $font-light;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
                 }
             }
         }

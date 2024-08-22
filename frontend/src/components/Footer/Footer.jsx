@@ -8,6 +8,7 @@ const Footer = () => {
   return (
     <div className="footer_sec">
       <div className="container">
+        
         <div className="row">
 
           <div className="col-lg-3 col-md-6 mb-5">
@@ -37,26 +38,26 @@ const Footer = () => {
             <h4 className="main-title">Quick Links</h4>
             <div className="pages">
               <a className="item" href="#"><FaAngleRight className='icon' />Home</a>
-              <a className="item" href="#"><FaAngleRight className='icon' />About Us</a>
-              <a className="item" href="#"><FaAngleRight className='icon' />Our Services</a>
-              <a className="item" href="#"><FaAngleRight className='icon' />Our Projects</a>
-              <a className="item" href="#"><FaAngleRight className='icon' />Contact Us</a>
+              <a className="item" href="/about"><FaAngleRight className='icon' />About Us</a>
+              <a className="item" href="/services"><FaAngleRight className='icon' />Our Services</a>
+              <a className="item" href="/allprojects"><FaAngleRight className='icon' />Our Projects</a>
+              <a className="item" href="/allblogs"><FaAngleRight className='icon' />Our Blogs</a>
+              <a className="item" href="/contact"><FaAngleRight className='icon' />Contact Us</a>
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6 mb-5 services">
             <h4 className="main-title">Newsletter</h4>
             <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
-              <div className="input-group">
-                <input type="text" className="form-control border-0" placeholder="Your Email"/>
-                    <button className="btn-style">Sign Up</button>
-              </div>
+            <div className="input-group">
+              <input type="text" className="form-control border-0" placeholder="Your Email" />
+              <button className="btn-style">Sign Up</button>
+            </div>
           </div>
 
         </div>
-      </div>
 
-      <div className="container">
+
         <div className="row copyright">
           <div className="col-lg-6 text-center">
             <p>&copy; <a href="#">Your Site Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
@@ -78,8 +79,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
       </div>
-      
     </div>
   )
 }

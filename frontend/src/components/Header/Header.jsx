@@ -5,9 +5,13 @@ import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaTwitter, Fa
 
 const Header = () => {
   return (
-    <div className="header_sec">
-      <div className="header-top">
-        <div className="container d-flex topbar">
+    <div className="header_sec d-flex">
+      <a href="" className="header-logo">
+        <h1 className="title">Klean</h1>
+      </a>
+
+      <div className="header_top">
+        <div className="header_info d-flex align-items-center">
           <div className="d-flex contact_sec">
             <div className="align-items-center contact">
               <FaEnvelope className='icon' />
@@ -36,27 +40,20 @@ const Header = () => {
             </a>
           </div>
         </div>
+
+        <div className="header_nav">
+            <ul className="navbar-nav">
+              <li><a href="/" className="nav-itemactive">Home</a></li>
+              <li><a href="/about" className="nav-item">About</a></li>
+              <li><a href="/services" className="nav-item">Service</a></li>
+              <li><a href="/allprojects" className="nav-item">Project</a></li>
+              <li><a href="/allblogs" className="nav-item">Blog</a></li>
+              <li><a href="/contact" className="nav-item">Contact</a></li>
+            </ul>
+
+            <a href="" className="btn-style">Get A Quote</a>
+          </div>
       </div>
-
-      <div className="container">
-        <div className="navbar">
-          <a href="" className="header-logo">
-            <h1 className="title">Klean</h1>
-          </a>
-
-
-          <ul className="navbar-nav">
-            <li><a href="/" className="nav-itemactive">Home</a></li>
-            <li><a href="/about" className="nav-item">About</a></li>
-            <li><a href="/service" className="nav-item">Service</a></li>
-            <li><a href="/project" className="nav-item">Project</a></li>
-            <li><a href="/contact" className="nav-item">Contact</a></li>
-          </ul>
-
-          <a href="" className="btn-style">Get A Quote</a>
-        </div>
-      </div>
-
     </div>
   )
 }
