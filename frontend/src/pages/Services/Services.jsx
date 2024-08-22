@@ -4,13 +4,13 @@ import "./Services.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { FaAngleDoubleRight, FaCity, FaHotel, FaSpa, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Contactinfo } from '../../containers';
-import blog1 from "../../../../assets/blog-1.jpg";
-import blog2 from "../../../../assets/blog-2.jpg";
-import blog3 from "../../../../assets/blog-3.jpg";
-import test from "../../../../assets/testimonial.jpg";
-import test1 from "../../../../assets/testimonial-1.jpg";
-import test2 from "../../../../assets/testimonial-2.jpg";
-import test3 from "../../../../assets/testimonial-3.jpg";
+import blog1 from "../../../public/assets/blog-1.jpg";
+import blog2 from "../../../public/assets/blog-2.jpg";
+import blog3 from "../../../public/assets/blog-3.jpg";
+import test from "../../../public/assets/testimonial.jpg";
+import test1 from "../../../public/assets/testimonial-1.jpg";
+import test2 from "../../../public/assets/testimonial-2.jpg";
+import test3 from "../../../public/assets/testimonial-3.jpg";
 
 const services = [
     {

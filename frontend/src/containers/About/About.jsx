@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./About.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
-import about_img from "../../../../assets/blog-2.jpg";
+import about_img from "../../../public/assets/blog-2.jpg";
 import { FaAward } from 'react-icons/fa';
 
 const About = () => {

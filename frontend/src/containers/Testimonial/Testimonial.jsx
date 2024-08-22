@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import "./Testimonial.scss";
-import bg from "../../../../assets/carousel-3.jpg";
-import test from "../../../../assets/testimonial.jpg";
-import test1 from "../../../../assets/testimonial-1.jpg";
-import test2 from "../../../../assets/testimonial-2.jpg";
-import test3 from "../../../../assets/testimonial-3.jpg";
+import bg from "../../../public/assets/carousel-3.jpg";
+import test from "../../../public/assets/testimonial.jpg";
+import test1 from "../../../public/assets/testimonial-1.jpg";
+import test2 from "../../../public/assets/testimonial-2.jpg";
+import test3 from "../../../public/assets/testimonial-3.jpg";
 
 const testimonials = [
     {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import "./Banner.scss";
-import carousel1 from "../../../../assets/carousel-1.jpg";
-import carousel2 from "../../../../assets/carousel-2.jpg";
-import carousel3 from "../../../../assets/carousel-3.jpg";
+import carousel1 from "../../../public/assets/carousel-1.jpg";
+import carousel2 from "../../../public/assets/carousel-2.jpg";
+import carousel3 from "../../../public/assets/carousel-3.jpg";
 
 const banners = [
     {

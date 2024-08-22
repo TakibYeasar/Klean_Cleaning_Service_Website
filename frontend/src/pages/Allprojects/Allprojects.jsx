@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import "./Allprojects.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { FaAngleDoubleRight, FaEye, FaLink } from "react-icons/fa";
-import port1 from "../../../../assets/portfolio-1.jpg";
-import port2 from "../../../../assets/portfolio-2.jpg";
-import port3 from "../../../../assets/portfolio-3.jpg";
-import port4 from "../../../../assets/portfolio-4.jpg";
-import port5 from "../../../../assets/portfolio-5.jpg";
-import port6 from "../../../../assets/portfolio-6.jpg";
+import port1 from "../../../public/assets/portfolio-1.jpg";
+import port2 from "../../../public/assets/portfolio-2.jpg";
+import port3 from "../../../public/assets/portfolio-3.jpg";
+import port4 from "../../../public/assets/portfolio-4.jpg";
+import port5 from "../../../public/assets/portfolio-5.jpg";
+import port6 from "../../../public/assets/portfolio-6.jpg";
 
 const portfolio = [
     { image: port1, title: "Portfolio title", category: "Complete" },
