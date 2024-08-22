@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Allblogs.scss";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import blog1 from "../../../../assets/blog-1.jpg";
 import blog2 from "../../../../assets/blog-2.jpg";
 import blog3 from "../../../../assets/blog-3.jpg";
 import { FaAngleDoubleRight } from "react-icons/fa";
-
 
 const blog = [
     {
@@ -38,9 +37,21 @@ const blog = [
         title: "Rebum lorem eos ipsum diam",
         desc: "Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet",
     },
-]
+];
+
+const ITEMS_PER_PAGE = 3;
 
 const Allblogs = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const totalPages = Math.ceil(blog.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const currentBlogs = blog.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
     return (
         <div className="allblogs_sec">
             <div className="top-header">
@@ -71,9 +82,8 @@ const Allblogs = () => {
                 </div>
 
                 <div className="row">
-
-                    {blog.map((item, i) => (
-                        <div className="col-lg-4 col-md-6 blog-item" key={i} >
+                    {currentBlogs.map((item, i) => (
+                        <div className="col-lg-4 col-md-6 blog-item" key={i}>
                             <div className="position-relative mb-4 blog_heading">
                                 <img className="img-fluid" width={100} src={item?.image} alt="" />
                                 <div className="blog-date">
@@ -88,23 +98,26 @@ const Allblogs = () => {
                             </div>
                             <h5 className="title">{item?.title}</h5>
                             <p className="mb-4">{item?.desc}</p>
-                            <a className="btn-style" href="">Read More</a>
+                            <a className="btn-style" href="/blogdetails">Read More</a>
                         </div>
                     ))}
-
                     <div className="col-12">
                         <ul className="pagination">
-                            <li className="page-item disabled">
-                                <a className="page-link" href="#">
+                            <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+                                <a className="page-link" href="#" onClick={() => handlePageChange(currentPage - 1)}>
                                     <span aria-hidden="true">&laquo;</span>
                                     <span className="sr-only">Previous</span>
                                 </a>
                             </li>
-                            <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                            <li className="page-item"><a className="page-link" href="#">2</a></li>
-                            <li className="page-item"><a className="page-link" href="#">3</a></li>
-                            <li className="page-item">
-                                <a className="page-link" href="#" aria-label="Next">
+                            {Array.from({ length: totalPages }, (_, index) => (
+                                <li key={index} className={`page-item ${currentPage === index + 1 ? "active" : ""}`}>
+                                    <a className="page-link" href="#" onClick={() => handlePageChange(index + 1)}>
+                                        {index + 1}
+                                    </a>
+                                </li>
+                            ))}
+                            <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
+                                <a className="page-link" href="#" onClick={() => handlePageChange(currentPage + 1)}>
                                     <span aria-hidden="true">&raquo;</span>
                                     <span className="sr-only">Next</span>
                                 </a>
@@ -114,7 +127,7 @@ const Allblogs = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Allblogs
+export default Allblogs;

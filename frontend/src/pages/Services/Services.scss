@@ -14,37 +14,70 @@
         margin: 5rem 0;
 
         .service-carousel {
-            .service-item {
-                padding: 0 1rem;
-                max-width: 20vw;
+            position: relative;
 
-                .icon-box {
-                    padding: 3rem;
-                    height: 20vh;
-                    background-color: $bg-color;
-                    align-items: center;
-                    border-radius: 1rem 1rem 0 0;
+            .arrows {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
 
-                    .icon {
-                        height: 3rem;
-                        width: 3rem;
-                        background-color: $bg-color;
-                        border-radius: 50%;
-                        border: 1px solid $primary-color;
-                        font-size: 1.8rem;
-                        color: $secondary-color;
-                        padding: 0.5rem;
-                    }
-
-                    h5 {
-                        font-size: 1.6rem;
-                        font-weight: 600;
-                    }
+                .arrow {
+                    font-size: 2rem;
+                    color: $primary-color;
+                    cursor: pointer;
                 }
 
-                .image {
-                    height: 30vh;
-                    border-radius: 0 0 1rem 1rem;
+                .left-arrow {
+                    margin-left: 1rem;
+                }
+
+                .right-arrow {
+                    margin-right: 1rem;
+                }
+            }
+
+            .service-items {
+                display: flex;
+                overflow: hidden;
+                position: relative;
+
+                .service-item {
+                    padding: 0 1rem;
+                    min-width: 50%;
+                    max-width: 50%;
+                    box-sizing: border-box;
+
+                    .icon-box {
+                        padding: 3rem;
+                        height: 20vh;
+                        background-color: $bg-color;
+                        align-items: center;
+                        border-radius: 1rem 1rem 0 0;
+
+                        .icon {
+                            height: 3rem;
+                            width: 3rem;
+                            background-color: $bg-color;
+                            border-radius: 50%;
+                            border: 1px solid $primary-color;
+                            font-size: 1.8rem;
+                            color: $secondary-color;
+                            padding: 0.5rem;
+                        }
+
+                        h5 {
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .image {
+                        height: 30vh;
+                        border-radius: 0 0 1rem 1rem;
+                    }
                 }
             }
         }
@@ -52,6 +85,7 @@
 
     .testimonial {
         margin: 5rem 0;
+
         .title-two {
             text-transform: uppercase;
         }
@@ -61,8 +95,32 @@
         }
 
         .testimonial-carousel {
-            .testimonial-item {
+            position: relative;
 
+            .arrows {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+
+                .arrow {
+                    font-size: 2rem;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+
+                .left-arrow {
+                    margin-left: 1rem;
+                }
+
+                .right-arrow {
+                    margin-right: 1rem;
+                }
+            }
+
+            .testimonial-item {
                 .img-fluid {
                     height: 5rem;
                     width: 5rem;

@@ -36,7 +36,7 @@ const Blog = () => {
                         </div>
                         <h5>Rebum lorem eos ipsum diam</h5>
                         <p className="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                        <a className="btn-style" href="">Read More</a>
+                        <a className="btn-style" href="/blogdetails">Read More</a>
                     </div>
                     <div className="col-lg-4 col-md-6 mb-5 blog-item">
                         <div className="position-relative mb-4 blog_heading">
@@ -53,7 +53,7 @@ const Blog = () => {
                         </div>
                         <h5>Rebum lorem eos ipsum diam</h5>
                         <p className="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                        <a className="btn-style" href="">Read More</a>
+                        <a className="btn-style" href="/blogdetails">Read More</a>
                     </div>
                     <div className="col-lg-4 col-md-6 mb-5 blog-item">
                         <div className="position-relative mb-4 blog_heading">
@@ -70,7 +70,7 @@ const Blog = () => {
                         </div>
                         <h5>Rebum lorem eos ipsum diam</h5>
                         <p className="mb-4">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna dolor amet</p>
-                        <a className="btn-style" href="">Read More</a>
+                        <a className="btn-style" href="/blogdetails">Read More</a>
                     </div>
                 </div>
             </div>

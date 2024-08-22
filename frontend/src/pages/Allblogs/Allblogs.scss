@@ -18,15 +18,16 @@
 
             .img-fluid {
                 height: 30vh;
-                width: 30vw;
+                width: 100%; // Changed to 100% to fit the container width
                 border-radius: $border-radius;
+                object-fit: cover; // Ensure the image covers the area nicely
             }
 
             .blog-date {
                 position: absolute;
                 background-color: $primary-color;
                 top: 0;
-                left: 21.5rem;
+                left: 1rem; // Adjusted for better alignment with varying image sizes
                 padding: 0.5rem 1.5rem;
                 border-top-right-radius: $border-radius;
 
@@ -39,10 +40,10 @@
                     color: $font-light;
                 }
             }
-
         }
 
         .blog_content {
+            margin-top: 1rem;
 
             a {
                 text-decoration: none;
@@ -62,6 +63,44 @@
         h5 {
             font-size: 25px;
             font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+
+        .page-item {
+            margin: 0 0.2rem;
+
+            &.disabled .page-link {
+                pointer-events: none;
+                color: $font-light;
+                background-color: $primary-color;
+            }
+
+            &.active .page-link {
+                background-color: $primary-color;
+                color: $font-light;
+                border-color: $primary-color;
+            }
+
+            .page-link {
+                border: 1px solid $primary-color;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $font-light;
+                }
+            }
         }
     }
 }

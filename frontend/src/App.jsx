@@ -16,8 +16,6 @@ function App() {
         <Route path="/blogdetails" element={<Blogdetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/auth" element={<Authenticate />} />
-        <Route path="/register" element={<Registrations />} />
       </Routes>
       <Footer />
     </BrowserRouter>

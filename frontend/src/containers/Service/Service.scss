@@ -5,6 +5,7 @@
 
     .background {
         background-color: $bg-dark;
+
         .image {
             height: 70vh;
             width: 100vw;
@@ -20,11 +21,14 @@
             text-transform: uppercase;
         }
 
-        h1, p {
+        h1,
+        p {
             color: $font-light;
         }
 
         .service-carousel {
+            position: relative;
+
             .service-item {
                 padding: 0 1rem;
                 max-width: 20vw;
@@ -34,7 +38,7 @@
                     height: 20vh;
                     background-color: $bg-color;
                     align-items: center;
-                    border-radius: 1rem 1rem 0 0 ;
+                    border-radius: 1rem 1rem 0 0;
 
                     .icon {
                         height: 3rem;
@@ -56,6 +60,37 @@
                 .image {
                     height: 30vh;
                     border-radius: 0 0 1rem 1rem;
+                }
+            }
+
+            .arrows {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+
+                .arrow {
+                    font-size: 2rem;
+                    color: $font-light;
+                    cursor: pointer;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                .left-arrow {
+                    margin-left: 1rem;
+                }
+
+                .right-arrow {
+                    margin-right: 1rem;
+                }
+            }
+
+            &:hover {
+                .arrow {
+                    opacity: 1;
                 }
             }
         }

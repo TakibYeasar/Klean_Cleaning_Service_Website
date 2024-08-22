@@ -3,9 +3,10 @@
 .testimonial_sec {
     position: relative;
 
-    
+
     .background {
         background-color: $bg-dark;
+
         .image {
             height: 70vh;
             width: 100vw;
@@ -19,8 +20,8 @@
         top: 15vh;
 
         .title-two {
-                text-transform: uppercase;
-            }
+            text-transform: uppercase;
+        }
 
         .main-title {
             color: $font-light;
@@ -56,12 +57,31 @@
             }
         }
 
-                .image {
-                    height: 45vh;
-                    width: 25vw;
-                    border-radius: 5px;
+                .dots {
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 20px;
+        
+                    .dot {
+                        width: 10px;
+                        height: 10px;
+                        background-color: #ccc;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                        cursor: pointer;
+        
+                        &.active {
+                            background-color: #ffc107;
+                        }
+                    }
                 }
+
+        .image {
+            height: 45vh;
+            width: 25vw;
+            border-radius: 5px;
+        }
     }
 
-    
+
 }

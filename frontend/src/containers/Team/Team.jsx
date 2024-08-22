@@ -1,13 +1,37 @@
-import React from 'react';
-import "./Team.scss";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import team1 from "../../../../assets//team-1.jpg";
-import team2 from "../../../../assets//team-2.jpg";
-import team3 from "../../../../assets//team-3.jpg";
-import team4 from "../../../../assets//team-4.jpg";
+import './Team.scss';
+import team1 from "../../../../assets/team-1.jpg";
+import team2 from "../../../../assets/team-2.jpg";
+import team3 from "../../../../assets/team-3.jpg";
+import team4 from "../../../../assets/team-4.jpg";
+
+const teamMembers = [
+    { img: team1, name: "Full Name 1", designation: "Designation 1" },
+    { img: team2, name: "Full Name 2", designation: "Designation 2" },
+    { img: team3, name: "Full Name 3", designation: "Designation 3" },
+    { img: team4, name: "Full Name 4", designation: "Designation 4" }
+];
 
 const Team = () => {
+    const [startIndex, setStartIndex] = useState(0);
+
+    const itemsToShow = 3;
+    const totalMembers = teamMembers.length;
+    const visibleMembers = [
+        ...teamMembers.slice(startIndex, startIndex + itemsToShow),
+        ...teamMembers.slice(0, Math.max(0, (startIndex + itemsToShow) - totalMembers))
+    ];
+
+    const handleNext = () => {
+        setStartIndex((prevIndex) => (prevIndex + 1) % totalMembers);
+    };
+
+    const handlePrev = () => {
+        setStartIndex((prevIndex) => (prevIndex - 1 + totalMembers) % totalMembers);
+    };
+
     return (
         <div className="team_sec">
             <div className="container">
@@ -24,78 +48,41 @@ const Team = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="team-carousel d-flex">
-
-                            <div className="team">
-                                <div className="position-relative">
-                                    <div className="team-img">
-                                        <img className="img-fluid" src={team1} alt="" />
-                                    </div>
-                                    <div className="team-social position-absolute">
-                                        <a className="btn-social" href="#"><FaTwitter className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaFacebook className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaLinkedin className='icon' /></a>
-                                    </div>
-                                </div>
-                                <div className="team-text">
-                                    <h5>Full Name</h5>
-                                    <p>Designation</p>
-                                </div>
-                            </div>
-                            <div className="team">
-                                <div className="position-relative">
-                                    <div className="team-img">
-                                        <img className="img-fluid w-100" src={team2} alt="" />
-                                    </div>
-                                    <div className="team-social position-absolute">
-                                        <a className="btn-social" href="#"><FaTwitter className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaFacebook className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaLinkedin className='icon' /></a>
-                                    </div>
-                                </div>
-                                <div className="team-text">
-                                    <h5>Full Name</h5>
-                                    <p>Designation</p>
-                                </div>
-                            </div>
-                            <div className="team">
-                                <div className="position-relative">
-                                    <div className="team-img">
-                                        <img className="img-fluid w-100" src={team3} alt="" />
-                                    </div>
-                                    <div className="team-social position-absolute">
-                                        <a className="btn-social" href="#"><FaTwitter className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaFacebook className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaLinkedin className='icon' /></a>
-                                    </div>
-                                </div>
-                                <div className="team-text">
-                                    <h5>Full Name</h5>
-                                    <p>Designation</p>
-                                </div>
-                            </div>
-                            <div className="team">
-                                <div className="position-relative">
-                                    <div className="team-img">
-                                        <img className="img-fluid w-100" src={team4} alt="" />
-                                    </div>
-                                    <div className="team-social position-absolute">
-                                        <a className="btn-social" href="#"><FaTwitter className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaFacebook className='icon' /></a>
-                                        <a className="btn-social" href="#"><FaLinkedin className='icon' /></a>
-                                    </div>
-                                </div>
-                                <div className="team-text">
-                                    <h5>Full Name</h5>
-                                    <p>Designation</p>
-                                </div>
-                            </div>
-
+                            <AnimatePresence>
+                                {visibleMembers.map((member, index) => (
+                                    <motion.div
+                                        key={startIndex + index}
+                                        className="team"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        <div className="position-relative ">
+                                            <div className="team-img">
+                                                <img className="img-fluid w-100" src={member.img} alt={member.name} />
+                                            </div>
+                                            <div className="team-social position-absolute">
+                                                <a className="btn-social" href="#"><FaTwitter className='icon' /></a>
+                                                <a className="btn-social" href="#"><FaFacebook className='icon' /></a>
+                                                <a className="btn-social" href="#"><FaLinkedin className='icon' /></a>
+                                            </div>
+                                        </div>
+                                        <div className="team-text">
+                                            <h5>{member.name}</h5>
+                                            <p>{member.designation}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </AnimatePresence>
+                            <button className="arrow left btn-style" onClick={handlePrev}>{"<"}</button>
+                            <button className="arrow right btn-style" onClick={handleNext}>{">"}</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Team
+export default Team;

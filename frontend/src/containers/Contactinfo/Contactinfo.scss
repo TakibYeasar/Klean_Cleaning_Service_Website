@@ -1,11 +1,13 @@
 @import "../../styles/sass/variables";
 
 .contactinfo_sec {
-
     .contact-info {
+        display: flex;
+
         .contact-info-item {
             background-color: $primary-color;
             height: 25vh;
+            display: flex;
             justify-content: center;
             align-items: center;
 
@@ -23,9 +25,16 @@
             p {
                 font-size: 1.2rem;
                 color: $font-light;
-                width: 500;
+                width: 500px;
             }
         }
 
+        .contact-info-item.middle-item {
+            background-color: $secondary-color;
+
+            .icon {
+                color: $primary-color;
+            }
+        }
     }
 }

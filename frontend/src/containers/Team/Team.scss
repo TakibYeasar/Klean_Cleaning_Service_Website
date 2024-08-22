@@ -5,30 +5,51 @@
 
     .title-two {
         text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
 
     p {
         font-size: 1.6rem;
+        color: $font-color;
     }
 
     .team-carousel {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+
         .team {
-            margin: 1rem;
+            flex: 0 0 calc(100% / 3);
+            margin: 0 0.5rem;
 
             .team-img {
                 .img-fluid {
+                    width: 100%;
                     height: 40vh;
-                    width: 20vw;
-                    border-top-right-radius: $border-radius;
-                    border-top-left-radius: $border-radius;
+                    border-radius: $border-radius;
+                    object-fit: cover;
                 }
             }
 
             .team-social {
                 display: grid;
+                place-items: center;
+                position: absolute;
                 top: 0;
-                background-color: $primary-color;
-                height: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($primary-color, 0.6);
+                opacity: 0;
+                transition: opacity 0.3s ease;
 
                 .btn-social {
                     margin: 0.5rem;
@@ -49,29 +70,50 @@
                 background-color: $primary-color;
                 text-align: center;
                 padding: 1rem 0;
-                border-bottom-right-radius: $border-radius;
                 border-bottom-left-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
 
                 h5 {
                     font-size: 1.5rem;
                     font-weight: 500;
+                    margin: 0.5rem 0;
                 }
 
                 p {
-                    font-size: 18px;
-                    font-weight: 500;
+                    font-size: 1rem;
+                    font-weight: 400;
                     color: $font-light;
+                    margin: 0;
                 }
             }
 
             &:hover {
                 .team-social {
-                    display: block;
-                    display: grid;
-                    transition: 2s;
+                    opacity: 1;
                 }
             }
         }
 
+        .arrow {
+            position: absolute;
+            top: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 2rem;
+            transform: translateY(-50%);
+            z-index: 10;
+            transition: background 0.3s ease;
+
+            &.left {
+                left: 1rem;
+            }
+
+            &.right {
+                right: 1rem;
+            }
+        }
     }
 }
